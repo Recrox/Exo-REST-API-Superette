@@ -17,7 +17,7 @@ namespace Providers.Repositories
 
         public void Add(Article article)
         {
-            throw new NotImplementedException();
+            this.webSuperetteContext.Article.Add(this.mapper.Map<Models.Article>(article));
         }
 
         public IEnumerable<Article> GetAll()

@@ -16,7 +16,7 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
 
         public void Add(Article article)
         {
-            throw new NotImplementedException();
+            this.articleRepository.Add(article);
         }
 
         public IEnumerable<Article> GetAll()

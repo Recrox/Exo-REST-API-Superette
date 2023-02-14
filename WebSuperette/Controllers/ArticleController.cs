@@ -24,5 +24,12 @@ namespace Exo_REST_API_Superette.Controllers
 
             return this.Ok(this.mapper.Map<IEnumerable<Article>>(articles));
         }
+
+        [HttpPut("Add")]
+        public IActionResult Add(Article article) 
+        {
+            this.articleDomain.Add(this.mapper.Map<Technocite.Auchan.Superette.Core.Models.Article>(article));
+            return this.Ok();
+        }
     }
 }
