@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Providers.Models
 {
-    internal class Ticket
+    public class Ticket
     {
+        public int Id { get; set; }
+
     }
 }

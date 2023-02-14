@@ -9,6 +9,6 @@
         public int Quantity { get; set; }
 
         public int CategoryId { get; set; }
-        //public CategoryArticle CategoryArticle { get; set; }
+        public CategoryArticle CategoryArticle { get; set; }
     }
 }
