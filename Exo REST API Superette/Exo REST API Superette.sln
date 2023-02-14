@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo REST API Superette", "Exo REST API Superette.csproj", "{5DA17DFF-B9AD-49E2-B02C-3D8698E8E510}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSuperette", "WebSuperette.csproj", "{5DA17DFF-B9AD-49E2-B02C-3D8698E8E510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technocite.Auchan.Superette.Data", "..\Technocite.Auchan.Superette.Site\Technocite.Auchan.Superette.Data.csproj", "{F555D2CA-8350-4999-BBFE-62B592C27A0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technocite.Auchan.Superette.Core", "..\Technocite.Auchan.Superette.Core\Technocite.Auchan.Superette.Core.csproj", "{62BA6B63-C678-45C3-87F5-611117D138F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technocite.Auchan.Superette.Buisness", "..\Technocite.Auchan.Superette.Buisness\Technocite.Auchan.Superette.Buisness.csproj", "{BE18C1ED-52D4-46BD-BA57-9B923FBA8D09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{5DA17DFF-B9AD-49E2-B02C-3D8698E8E510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DA17DFF-B9AD-49E2-B02C-3D8698E8E510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DA17DFF-B9AD-49E2-B02C-3D8698E8E510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F555D2CA-8350-4999-BBFE-62B592C27A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F555D2CA-8350-4999-BBFE-62B592C27A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F555D2CA-8350-4999-BBFE-62B592C27A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F555D2CA-8350-4999-BBFE-62B592C27A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62BA6B63-C678-45C3-87F5-611117D138F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BA6B63-C678-45C3-87F5-611117D138F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BA6B63-C678-45C3-87F5-611117D138F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BA6B63-C678-45C3-87F5-611117D138F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE18C1ED-52D4-46BD-BA57-9B923FBA8D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE18C1ED-52D4-46BD-BA57-9B923FBA8D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE18C1ED-52D4-46BD-BA57-9B923FBA8D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE18C1ED-52D4-46BD-BA57-9B923FBA8D09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
