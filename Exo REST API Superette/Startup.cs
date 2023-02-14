@@ -1,5 +1,11 @@
 ﻿using Providers;
 using Microsoft.EntityFrameworkCore;
+using Providers.Mappings;
+using Technocite.Auchan.Superette.Site.ViewModels.Mappings;
+using Technocite.Auchan.Superette.Buisness.Interfaces;
+using Technocite.Auchan.Superette.Buisness.Domains;
+using Providers.Repositories;
+using Data.Interfaces;
 
 namespace Technocite.Auchan.Superette.Site
 {
@@ -31,6 +37,11 @@ namespace Technocite.Auchan.Superette.Site
 
             services.AddDbContext<WebSuperetteContext>(option =>
                 option.UseSqlServer(Configuration.GetConnectionString("Database")));
+
+            services.AddAutoMapper(typeof(SqlMapping), typeof(ApiMapping)); //ajouter de mes mappeurs
+
+            services.AddTransient<IArticleDomain, ArticleDomain>();
+            services.AddTransient<IArticleRepository, ArticleRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

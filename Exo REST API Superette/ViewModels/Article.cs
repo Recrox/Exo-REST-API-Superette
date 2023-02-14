@@ -1,4 +1,4 @@
-﻿namespace Technocite.Auchan.Superette.Core.Models
+﻿namespace Technocite.Auchan.Superette.Site.ViewModels
 {
     public class Article
     {
@@ -8,5 +8,4 @@
         public decimal Price { get; set; }
         public int Quantity { get; set; }
     }
-    
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Domains\" />
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Technocite.Auchan.Superette.Core\Technocite.Auchan.Superette.Core.csproj" />
   </ItemGroup>
 
 </Project>
