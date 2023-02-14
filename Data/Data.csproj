@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Technocite.Auchan.Superette.Core\Technocite.Auchan.Superette.Core.csproj" />
+  </ItemGroup>
+
 </Project>

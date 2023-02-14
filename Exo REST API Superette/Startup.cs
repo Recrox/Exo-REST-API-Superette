@@ -1,4 +1,7 @@
-﻿namespace Technocite.Auchan.Superette.Site
+﻿using Providers;
+using Microsoft.EntityFrameworkCore;
+
+namespace Technocite.Auchan.Superette.Site
 {
     public class Startup
     {
@@ -25,6 +28,9 @@
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+
+            services.AddDbContext<WebSuperetteContext>(option =>
+                option.UseSqlServer(Configuration.GetConnectionString("Database")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
