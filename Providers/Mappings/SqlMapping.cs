@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Technocite.Auchan.Superette.Core.Models;
+using Providers.Models;
 
 namespace Providers.Mappings
 {
@@ -7,7 +7,7 @@ namespace Providers.Mappings
     {
         public SqlMapping()
         {
-            this.CreateMap<Article, Models.Article>().ReverseMap();
+            this.CreateMap<Technocite.Auchan.Superette.Core.Models.Article, Article>().ReverseMap();
         }
     }
 }

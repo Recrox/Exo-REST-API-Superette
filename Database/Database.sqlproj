@@ -59,5 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Article.sql" />
+    <Build Include="CategoryArticle.sql" />
   </ItemGroup>
 </Project>

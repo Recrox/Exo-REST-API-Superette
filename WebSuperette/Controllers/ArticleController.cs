@@ -5,7 +5,7 @@ using Technocite.Auchan.Superette.Site.ViewModels;
 
 namespace Exo_REST_API_Superette.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ArticleController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace Exo_REST_API_Superette.Controllers
             this.articleDomain = articleDomain;
             this.mapper = mapper;
         }
-        [HttpGet("GetAll")]
+        [HttpGet]
         public IActionResult GetAll()
         {
             var articles =  this.articleDomain.GetAll();
@@ -25,11 +25,39 @@ namespace Exo_REST_API_Superette.Controllers
             return this.Ok(this.mapper.Map<IEnumerable<Article>>(articles));
         }
 
-        [HttpPut("Add")]
-        public IActionResult Add(Article article) 
+        [HttpPost]
+        public async Task<IActionResult> AddAsync(Article article) 
         {
-            this.articleDomain.Add(this.mapper.Map<Technocite.Auchan.Superette.Core.Models.Article>(article));
+            try
+            {
+                await this.articleDomain.AddAsync(this.mapper.Map<Technocite.Auchan.Superette.Core.Models.Article>(article));
+                return this.Ok();
+            }
+            catch (Exception e)
+            {
+                return this.BadRequest(e.Message);
+            }
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteByIdAsync(int id)
+        {
+            await this.articleDomain.RemoveByIdAsync(id);
             return this.Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateAsync(Article article) 
+        {
+            try
+            {
+                await this.articleDomain.UpdateAsync(this.mapper.Map<Technocite.Auchan.Superette.Core.Models.Article>(article));
+                return this.Ok();
+            }
+            catch (Exception e)
+            {
+                return this.BadRequest(e.Message);
+            }
         }
     }
 }

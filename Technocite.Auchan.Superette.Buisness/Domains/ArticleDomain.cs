@@ -1,5 +1,6 @@
 ﻿
 using Data.Interfaces;
+using System.Runtime.CompilerServices;
 using Technocite.Auchan.Superette.Buisness.Interfaces;
 using Technocite.Auchan.Superette.Core.Models;
 
@@ -14,14 +15,32 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
             this.articleRepository = articleRepository;
         }
 
-        public void Add(Article article)
+        public async Task AddAsync(Article article)
         {
-            this.articleRepository.Add(article);
+            if (article.Quantity < 0)
+            {
+                throw new Exception("Quantity not valid");
+            }
+            await this.articleRepository.AddAsync(article);
         }
 
         public IEnumerable<Article> GetAll()
         {
             return this.articleRepository.GetAll();
+        }
+
+        public async Task RemoveByIdAsync(int id)
+        {
+            await this.articleRepository.RemoveByIdAsync(id);
+        }
+
+        public async Task UpdateAsync(Article article)
+        {
+            if (article.Quantity < 0)
+            {
+                throw new Exception("Quantity not valid");
+            }
+            await this.articleRepository.UpdateAsync(article);
         }
     }
 }

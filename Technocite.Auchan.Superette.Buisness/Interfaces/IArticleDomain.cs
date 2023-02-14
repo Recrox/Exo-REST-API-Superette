@@ -5,6 +5,8 @@ namespace Technocite.Auchan.Superette.Buisness.Interfaces
     public interface IArticleDomain
     {
         IEnumerable<Article> GetAll();
-        void Add(Article article);
+        Task AddAsync(Article article);
+        Task RemoveByIdAsync(int id);
+        Task UpdateAsync(Article article);
     }
 }

@@ -5,6 +5,8 @@ namespace Data.Interfaces
     public interface IArticleRepository
     {
         IEnumerable<Article> GetAll();
-        void Add(Article article);
+        Task AddAsync(Article article);
+        Task RemoveByIdAsync(int id);
+        Task UpdateAsync(Article article);
     }
 }

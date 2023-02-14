@@ -15,14 +15,28 @@ namespace Providers.Repositories
             this.mapper = mapper;
         }
 
-        public void Add(Article article)
+        public async Task AddAsync(Article article)
         {
-            this.webSuperetteContext.Article.Add(this.mapper.Map<Models.Article>(article));
+            await this.webSuperetteContext.Article.AddAsync(this.mapper.Map<Models.Article>(article));
+            await this.webSuperetteContext.SaveChangesAsync();
         }
 
         public IEnumerable<Article> GetAll()
         {
             return this.mapper.Map<IEnumerable<Article>>(this.webSuperetteContext.Article);
+        }
+
+        public async Task RemoveByIdAsync(int id)
+        {
+             var article = await this.webSuperetteContext.Article.FindAsync(id);
+            this.webSuperetteContext.Article.Remove(article);
+            await this.webSuperetteContext.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Article article)
+        {
+            this.webSuperetteContext.Article.Update(this.mapper.Map<Models.Article>(article));
+            await this.webSuperetteContext.SaveChangesAsync();
         }
     }
 }

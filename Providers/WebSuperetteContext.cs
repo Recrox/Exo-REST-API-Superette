@@ -11,5 +11,7 @@ namespace Providers
         }
 
         public DbSet<Article> Article { get; set; }
+        public DbSet<CategoryArticle> CategoryArticle { get; set; }
+
     }
 }
