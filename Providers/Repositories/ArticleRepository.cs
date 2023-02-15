@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Data.Interfaces;
+using System.Collections.Generic;
 using Technocite.Auchan.Superette.Core.Models;
 
 namespace Providers.Repositories
@@ -21,14 +22,24 @@ namespace Providers.Repositories
             await this.webSuperetteContext.SaveChangesAsync();
         }
 
+        public bool ContainsCategoryId(int categoryId)
+        {
+            return this.webSuperetteContext.Article.Where(a=>a.CategoryId== categoryId).Any();
+        }
+
         public IEnumerable<Article> GetAll()
         {
             return this.mapper.Map<IEnumerable<Article>>(this.webSuperetteContext.Article);
         }
 
+        public async Task<Article> GetByIdAsync(int id)
+        {
+            return await this.mapper.Map<Task<Article>>(this.webSuperetteContext.Article.FindAsync(id));
+        }
+
         public async Task RemoveByIdAsync(int id)
         {
-             var article = await this.webSuperetteContext.Article.FindAsync(id);
+            var article = await this.webSuperetteContext.Article.FindAsync(id);
             this.webSuperetteContext.Article.Remove(article);
             await this.webSuperetteContext.SaveChangesAsync();
         }
