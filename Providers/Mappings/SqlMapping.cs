@@ -8,6 +8,7 @@ namespace Providers.Mappings
         public SqlMapping()
         {
             this.CreateMap<Technocite.Auchan.Superette.Core.Models.Article, Article>().ReverseMap();
+            this.CreateMap<Technocite.Auchan.Superette.Core.Models.CategoryArticle, CategoryArticle>().ReverseMap();
         }
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Technocite.Auchan.Superette.Buisness.Interfaces;
 using Technocite.Auchan.Superette.Site.ViewModels;
 
-namespace Exo_REST_API_Superette.Controllers
+namespace Technocite.Auchan.Superette.Site.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]

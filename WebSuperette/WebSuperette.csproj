@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Exo_REST_API_Superette</RootNamespace>
+    <RootNamespace>Technocite.Auchan.Superette.Site</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
