@@ -61,5 +61,6 @@
     <Build Include="Article.sql" />
     <Build Include="CategoryArticle.sql" />
     <Build Include="Ticket.sql" />
+    <Build Include="ArticleTicket.sql" />
   </ItemGroup>
 </Project>

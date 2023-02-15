@@ -35,15 +35,8 @@ namespace Technocite.Auchan.Superette.Site.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteByIdAsync(int id)
         {
-            try
-            {
-                await this.categoryArticleDomain.RemoveByIdAsync(id);
-                return this.Ok();
-            }
-            catch (Exception e)
-            {
-                return this.BadRequest(e.Message);
-            }
+            await this.categoryArticleDomain.RemoveByIdAsync(id);
+            return this.Ok();
         }
 
         [HttpPost]

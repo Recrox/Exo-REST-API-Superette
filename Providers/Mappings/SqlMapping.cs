@@ -9,6 +9,7 @@ namespace Providers.Mappings
         {
             this.CreateMap<Technocite.Auchan.Superette.Core.Models.Article, Article>().ReverseMap();
             this.CreateMap<Technocite.Auchan.Superette.Core.Models.CategoryArticle, CategoryArticle>().ReverseMap();
+            this.CreateMap<Technocite.Auchan.Superette.Core.Models.Ticket, Ticket>().ReverseMap();
         }
     }
 }

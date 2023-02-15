@@ -48,6 +48,9 @@ namespace Technocite.Auchan.Superette.Site
 
             services.AddTransient<ICategoryArticleDomain, CategoryArticleDomain>();
             services.AddTransient<ICategoryArticleRepository, CategoryArticleRepository>();
+
+            services.AddTransient<ITicketDomain, TicketDomain>();
+            services.AddTransient<ITicketRepository, TicketRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

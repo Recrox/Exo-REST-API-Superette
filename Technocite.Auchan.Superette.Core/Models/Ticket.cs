@@ -1,4 +1,4 @@
-﻿namespace Providers.Models
+﻿namespace Technocite.Auchan.Superette.Core.Models
 {
     public class Ticket
     {
