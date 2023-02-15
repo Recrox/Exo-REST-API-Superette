@@ -19,6 +19,7 @@ namespace Providers.Repositories
         {
             await this.webSuperetteContext.Ticket.AddAsync(this.mapper.Map<Models.Ticket>(ticket));
             await this.webSuperetteContext.SaveChangesAsync();
+            
         }
 
         public IEnumerable<Ticket> GetAll()

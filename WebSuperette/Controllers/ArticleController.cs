@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using Technocite.Auchan.Superette.Buisness.Interfaces;
 using Technocite.Auchan.Superette.Site.ViewModels;
 
@@ -11,12 +12,29 @@ namespace Technocite.Auchan.Superette.Site.Controllers
     {
         private readonly IArticleDomain articleDomain;
         private readonly IMapper mapper;
+        private readonly ITicketDomain ticketDomain;
 
-        public ArticleController(IArticleDomain articleDomain, IMapper mapper)
+        public ArticleController(IArticleDomain articleDomain, IMapper mapper,ITicketDomain ticketDomain)
         {
             this.articleDomain = articleDomain;
             this.mapper = mapper;
+            this.ticketDomain = ticketDomain;
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Buy(IEnumerable<Article> articles)
+        {
+            try
+            {
+                await this.articleDomain.Buy(this.mapper.Map<IEnumerable<Core.Models.Article>>(articles));
+                return this.Ok();
+            }
+            catch (Exception e)
+            {
+                return this.BadRequest(e.Message);
+            }
+        }
+
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -30,7 +48,7 @@ namespace Technocite.Auchan.Superette.Site.Controllers
         {
             try
             {
-                await this.articleDomain.AddAsync(this.mapper.Map<Technocite.Auchan.Superette.Core.Models.Article>(article));
+                await this.articleDomain.AddAsync(this.mapper.Map<Core.Models.Article>(article));
                 return this.Ok();
             }
             catch (Exception e)
@@ -46,12 +64,12 @@ namespace Technocite.Auchan.Superette.Site.Controllers
             return this.Ok();
         }
 
-        [HttpPost]
+        [HttpPut]
         public async Task<IActionResult> UpdateAsync(Article article) 
         {
             try
             {
-                await this.articleDomain.UpdateAsync(this.mapper.Map<Technocite.Auchan.Superette.Core.Models.Article>(article));
+                await this.articleDomain.UpdateAsync(this.mapper.Map<Core.Models.Article>(article));
                 return this.Ok();
             }
             catch (Exception e)

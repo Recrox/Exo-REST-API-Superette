@@ -10,6 +10,6 @@
 
         public int CategoryId { get; set; }
 
-        public IEnumerable<Ticket> Tickets { get; set; }
+        public ICollection<Ticket> Tickets { get; set; }
     }
 }

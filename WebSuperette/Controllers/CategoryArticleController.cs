@@ -39,7 +39,7 @@ namespace Technocite.Auchan.Superette.Site.Controllers
             return this.Ok();
         }
 
-        [HttpPost]
+        [HttpPut]
         public async Task<IActionResult> UpdateAsync(CategoryArticle categoryArticle) 
         {
             try

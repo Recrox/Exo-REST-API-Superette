@@ -9,6 +9,6 @@
         public int Quantity { get; set; }
         public int CategoryId { get; set; }
 
-        public IEnumerable<Ticket> Ticket { get; set; }
+        //public IEnumerable<Ticket> Tickets { get; set; }
     }
 }

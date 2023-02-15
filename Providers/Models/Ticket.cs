@@ -7,6 +7,7 @@
         public decimal PriceHtva { get; set; }
         public decimal PriceTTC { get; set; }
 
-        public IEnumerable<Article> Articles { get; set; }
+
+        public ICollection<Article> Articles { get; set; }
     }
 }

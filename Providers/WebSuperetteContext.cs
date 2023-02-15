@@ -17,12 +17,15 @@ namespace Providers
                 .HasMany(a => a.Tickets)
                 .WithMany(p => p.Articles);
 
-                //.UsingEntity(j => j.ToTable("PostTags"));
+              
         }
 
         public DbSet<Article> Article { get; set; }
         public DbSet<CategoryArticle> CategoryArticle { get; set; }
         public DbSet<Ticket> Ticket { get; set; }
+
+        public DbSet<ArticleTicket> ArticleTicket { get; set; }
+
 
     }
 }
