@@ -35,8 +35,11 @@ namespace Technocite.Auchan.Superette.Site
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
+            /*services.AddDbContext<WebSuperetteContext>(option =>
+                option.UseSqlServer(Configuration.GetConnectionString("Database")));*/
+
             services.AddDbContext<WebSuperetteContext>(option =>
-                option.UseSqlServer(Configuration.GetConnectionString("Database")));
+                option.UseSqlServer(Configuration.GetConnectionString("DatabaseTechnocite")));
 
             services.AddAutoMapper(typeof(SqlMapping), typeof(ApiMapping)); //ajouter de mes mappeurs
 

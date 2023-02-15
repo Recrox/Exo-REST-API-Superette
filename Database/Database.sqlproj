@@ -60,5 +60,6 @@
   <ItemGroup>
     <Build Include="Article.sql" />
     <Build Include="CategoryArticle.sql" />
+    <Build Include="Ticket.sql" />
   </ItemGroup>
 </Project>
