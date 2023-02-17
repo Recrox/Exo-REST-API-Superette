@@ -9,5 +9,6 @@ namespace Technocite.Auchan.Superette.Buisness.Interfaces
         Task AddAsync(Ticket ticket);
         Task RemoveByIdAsync(int id);
         Task UpdateAsync(Ticket ticket);
+        Task Buy(IEnumerable<ArticleTicket> articles);
     }
 }

@@ -1,0 +1,3 @@
+﻿C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Data\Interfaces\IArticleRepository.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Data\Interfaces\ICategoryArticleRepository.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Data\Interfaces\ITicketRepository.cs

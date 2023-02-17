@@ -12,19 +12,31 @@ namespace Providers
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder
+            /*modelBuilder
                 .Entity<Article>()
-                .HasMany(a => a.Tickets)
-                .WithMany(p => p.Articles);
+                .HasMany(a => a.ArticleTickets)
+                .WithOne()
+                .HasForeignKey(at=>at.ArticleId)
+                ;
 
-              
+            modelBuilder
+                .Entity<Ticket>()
+                .HasMany(a => a.ArticleTickets)
+                .WithOne()
+                .HasForeignKey(at => at.TicketId)
+                ;*/
+
+
+
+
+
         }
 
         public DbSet<Article> Article { get; set; }
         public DbSet<CategoryArticle> CategoryArticle { get; set; }
         public DbSet<Ticket> Ticket { get; set; }
 
-        public DbSet<ArticleTicket> ArticleTicket { get; set; }
+        //public DbSet<ArticleTicket> ArticleTicket { get; set; }
 
 
     }

@@ -18,7 +18,16 @@ namespace Providers.Repositories
         public async Task AddAsync(Ticket ticket)
         {
             await this.webSuperetteContext.Ticket.AddAsync(this.mapper.Map<Models.Ticket>(ticket));
-            await this.webSuperetteContext.SaveChangesAsync();
+            try
+            {
+                await this.webSuperetteContext.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message, e);
+            }
+            
             
         }
 

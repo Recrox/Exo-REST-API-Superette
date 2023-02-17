@@ -1,0 +1,16 @@
+﻿C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\Controllers\ArticleController.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\Controllers\CategoryArticleController.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\Controllers\TicketController.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\Mappings\ApiMapping.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\Program.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\Startup.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\ViewModels\Article.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\ViewModels\CategoryArticle.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\ViewModels\Ticket.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\obj\Debug\net7.0\WebSuperette.GlobalUsings.g.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\obj\Debug\net7.0\WebSuperette.AssemblyInfo.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\obj\Debug\net7.0\WebSuperette.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\appsettings.Development.json
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\appsettings.json
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\WebSuperette\Properties\launchSettings.json

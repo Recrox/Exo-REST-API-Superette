@@ -1,0 +1,6 @@
+﻿C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Technocite.Auchan.Superette.Buisness\Domains\ArticleDomain.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Technocite.Auchan.Superette.Buisness\Domains\CategoryArticleDomain.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Technocite.Auchan.Superette.Buisness\Domains\TicketDomain.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Technocite.Auchan.Superette.Buisness\Interfaces\IArticleDomain.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Technocite.Auchan.Superette.Buisness\Interfaces\ICategoryArticleDomain.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Technocite.Auchan.Superette.Buisness\Interfaces\ITicketDomain.cs

@@ -1,0 +1,9 @@
+﻿C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Mappings\SqlMapping.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Models\Article.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Models\ArticleTicket.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Models\CategoryArticle.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Models\Ticket.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Repositories\ArticleRepository.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Repositories\CategoryArticleRepository.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\Repositories\TicketRepository.cs
+C:\Users\s_11864_analystes\Desktop\Dossier Formation\Chapitre 20 architecture SOA SOAP REST\Exo REST API\Providers\WebSuperetteContext.cs

@@ -8,6 +8,9 @@ namespace Providers.Models
         public int ArticleId { get; set; }
         public int TicketId { get; set; }
 
-        //public Article Article { get; set; }
+        public int Quantity { get; set; }
+
+        /*public Article Article { get; set; }
+        public Ticket Ticket { get; set; }*/
     }
 }

@@ -8,6 +8,6 @@
         public decimal PriceTTC { get; set; }
 
 
-        public ICollection<Article> Articles { get; set; }
+        public ICollection<ArticleTicket> ArticleTickets { get; set; } = null!;
     }
 }

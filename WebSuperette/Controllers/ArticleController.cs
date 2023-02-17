@@ -12,27 +12,11 @@ namespace Technocite.Auchan.Superette.Site.Controllers
     {
         private readonly IArticleDomain articleDomain;
         private readonly IMapper mapper;
-        private readonly ITicketDomain ticketDomain;
 
-        public ArticleController(IArticleDomain articleDomain, IMapper mapper,ITicketDomain ticketDomain)
+        public ArticleController(IArticleDomain articleDomain, IMapper mapper)
         {
             this.articleDomain = articleDomain;
             this.mapper = mapper;
-            this.ticketDomain = ticketDomain;
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Buy(IEnumerable<Article> articles)
-        {
-            try
-            {
-                await this.articleDomain.Buy(this.mapper.Map<IEnumerable<Core.Models.Article>>(articles));
-                return this.Ok();
-            }
-            catch (Exception e)
-            {
-                return this.BadRequest(e.Message);
-            }
         }
 
         [HttpGet]

@@ -40,8 +40,19 @@ namespace Technocite.Auchan.Superette.Site.Controllers
             }
         }
 
-
-
+        [HttpPost]
+        public async Task<IActionResult> Buy(IEnumerable<ArticleTicket> articles)
+        {
+            try
+            {
+                await this.ticketDomain.Buy(this.mapper.Map<IEnumerable<Core.Models.ArticleTicket>>(articles));
+                return this.Ok();
+            }
+            catch (Exception e)
+            {
+                return this.BadRequest(e.Message);
+            }
+        }
 
     }
 }
