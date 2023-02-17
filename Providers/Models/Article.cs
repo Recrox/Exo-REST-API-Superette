@@ -9,7 +9,8 @@
         public int Quantity { get; set; }
 
         public int CategoryId { get; set; }
+        public int SupplierId { get; set; }
 
-        //public ICollection<ArticleTicket> ArticleTickets { get; set; } = null!;
+
     }
 }

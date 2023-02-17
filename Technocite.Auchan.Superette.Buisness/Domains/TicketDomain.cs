@@ -52,7 +52,7 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
                     throw new Exception("il n'y a pas assez d'article dispo");
                 }
 
-                articleDb.Quantity = article.Quantity;
+                articleDb.Quantity -= article.Quantity;
 
                 await this.articleRepository.UpdateAsync(articleDb);
 

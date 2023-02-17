@@ -4,9 +4,12 @@
 	Brand Varchar(250) NOT NULL,
 	Price Decimal NOT NULL,
 	Quantity int NOT NULL,
-	CategoryId Int NOT NULL,
 
-	FOREIGN KEY (CategoryId) REFERENCES CategoryArticle(Id)
+	CategoryId Int NOT NULL,
+	SupplierId Int NOT NULL,
+
+	FOREIGN KEY (CategoryId) REFERENCES CategoryArticle(Id),
+	FOREIGN KEY (SupplierId) REFERENCES Supplier(Id)
 )
 
 

@@ -35,6 +35,7 @@ namespace Providers
         public DbSet<Article> Article { get; set; }
         public DbSet<CategoryArticle> CategoryArticle { get; set; }
         public DbSet<Ticket> Ticket { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
 
         //public DbSet<ArticleTicket> ArticleTicket { get; set; }
 
