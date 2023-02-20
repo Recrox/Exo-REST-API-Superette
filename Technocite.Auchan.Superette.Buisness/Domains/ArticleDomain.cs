@@ -9,12 +9,10 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
     {
         
         private readonly IArticleRepository articleRepository;
-        private readonly ITicketRepository ticketRepository;
 
-        public ArticleDomain(IArticleRepository articleRepository,ITicketRepository ticketRepository)
+        public ArticleDomain(IArticleRepository articleRepository)
         {
             this.articleRepository = articleRepository;
-            this.ticketRepository = ticketRepository;
         }
 
         public async Task AddAsync(Article article)

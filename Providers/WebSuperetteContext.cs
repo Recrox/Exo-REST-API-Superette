@@ -26,10 +26,6 @@ namespace Providers
                 .HasForeignKey(at => at.TicketId)
                 ;*/
 
-
-
-
-
         }
 
         public DbSet<Article> Article { get; set; }

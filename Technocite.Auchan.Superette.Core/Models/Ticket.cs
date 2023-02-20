@@ -7,6 +7,6 @@
         public decimal PriceHtva { get; set; }
         public decimal PriceTTC { get; set; }
 
-        public IEnumerable<ArticleTicket> articleTickets { get; set; } = null!;
+        public IEnumerable<ArticleTicket> ArticleTicket { get; set; } = null!;
     }
 }

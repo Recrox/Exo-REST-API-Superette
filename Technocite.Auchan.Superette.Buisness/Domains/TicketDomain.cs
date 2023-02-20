@@ -63,7 +63,7 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
             {
                 PriceHtva = total,
                 PriceTTC = total * CoefTva,
-                articleTickets = articles
+                ArticleTicket = articles
                 
             };
             await this.ticketRepository.AddAsync(newTicket);

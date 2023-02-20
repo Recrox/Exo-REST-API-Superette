@@ -1,6 +1,7 @@
 ﻿Create Table Supplier(
 	Id Int Identity(1,1),
-	SupplierName varchar(250),
+	SupplierCode varchar(250) NOT NULL,
+	SupplierName varchar(250) NOT NULL,
 	Country varchar(250) NOT NULL,
 	EcoScore Int  NOT NULL,
 
