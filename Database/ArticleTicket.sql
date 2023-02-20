@@ -3,6 +3,7 @@
     [ArticleId] int NOT NULL,
     [TicketId] int NOT NULL,
     [Quantity] int NOT NULL,
+    [Price] decimal NOT NULL,
 
     --CONSTRAINT [PK_ArticleTicket] PRIMARY KEY ([ArticleId], [TicketId]),
     CONSTRAINT [PK_ArticleTicket] PRIMARY KEY ([Id]) ,

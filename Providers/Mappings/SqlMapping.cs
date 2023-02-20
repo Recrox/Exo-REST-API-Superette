@@ -11,12 +11,11 @@ namespace Providers.Mappings
                 //.ForMember(a=> a.ArticleTickets.Select(a=>a.Ticket),m=>m.MapFrom(a2=> a2.Tickets))
                 .ReverseMap()
                 ;
-
-
-
             this.CreateMap<Technocite.Auchan.Superette.Core.Models.CategoryArticle, CategoryArticle>().ReverseMap();
             this.CreateMap<Technocite.Auchan.Superette.Core.Models.Ticket, Ticket>().ReverseMap();
             this.CreateMap<Technocite.Auchan.Superette.Core.Models.ArticleTicket, ArticleTicket>().ReverseMap();
+
+            this.CreateMap<Technocite.Auchan.Superette.Core.Models.Supplier, Supplier>().ReverseMap();
         }
     }
 }

@@ -2,7 +2,7 @@
 	Id Int primary key identity(1,1),
 	Name_Article Varchar(250) NOT NULL,
 	Brand Varchar(250) NOT NULL,
-	Price Decimal NOT NULL,
+	Price Decimal(16,2) NOT NULL,
 	Quantity int NOT NULL,
 
 	CategoryId Int NOT NULL,

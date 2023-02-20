@@ -45,8 +45,8 @@ namespace Technocite.Auchan.Superette.Site.Controllers
         {
             try
             {
-                await this.ticketDomain.Buy(this.mapper.Map<IEnumerable<Core.Models.ArticleTicket>>(articles));
-                return this.Ok();
+                var ticket = await this.ticketDomain.Buy(this.mapper.Map<IEnumerable<Core.Models.ArticleTicket>>(articles));
+                return this.Ok(ticket);
             }
             catch (Exception e)
             {

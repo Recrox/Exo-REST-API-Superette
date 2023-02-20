@@ -36,7 +36,7 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
             throw new NotImplementedException();
         }
 
-        public async Task Buy(IEnumerable<ArticleTicket> articles)
+        public async Task<Ticket> Buy(IEnumerable<ArticleTicket> articles)
         {
             decimal total = 0;
             foreach (var article in articles)
@@ -63,10 +63,23 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
             {
                 PriceHtva = total,
                 PriceTTC = total * CoefTva,
-                ArticleTicket = articles
+                ArticleTicket = articles,
                 
             };
+            
             await this.ticketRepository.AddAsync(newTicket);
+
+
+            return newTicket;
+
+        }
+
+        public async Task<Ticket> GetDetails(int id)
+        {
+            var ticket = await this.ticketRepository.GetByIdAsync(id);
+
+            return ticket;
+
 
         }
     }

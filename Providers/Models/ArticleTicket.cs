@@ -9,7 +9,9 @@ namespace Providers.Models
         public int TicketId { get; set; }
 
         public int Quantity { get; set; }
+        public decimal Price { get; set; }
 
+        public virtual Article Article { get; set; } = null!;
         /*public Article Article { get; set; }
         public Ticket Ticket { get; set; }*/
     }

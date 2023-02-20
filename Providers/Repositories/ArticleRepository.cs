@@ -20,7 +20,16 @@ namespace Providers.Repositories
         public async Task AddAsync(Article article)
         {
             await this.webSuperetteContext.Article.AddAsync(this.mapper.Map<Models.Article>(article));
-            await this.webSuperetteContext.SaveChangesAsync();
+            try
+            {
+                await this.webSuperetteContext.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message, e);
+            }
+            
         }
 
         public bool ContainsCategoryId(int categoryId)
@@ -35,7 +44,7 @@ namespace Providers.Repositories
                 );
         }
 
-        public async Task<Article> GetByIdAsync(int id)
+        public async Task<Article?> GetByIdAsync(int id)
         {
             var article = await this.webSuperetteContext.Article
                 .AsNoTracking()

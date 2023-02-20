@@ -10,6 +10,7 @@ namespace Technocite.Auchan.Superette.Site.ViewModels.Mappings
             this.CreateMap<CategoryArticle, Core.Models.CategoryArticle>().ReverseMap();
             this.CreateMap<Ticket, Core.Models.Ticket>().ReverseMap();
             this.CreateMap<ArticleTicket, Core.Models.ArticleTicket>().ReverseMap();
+            this.CreateMap<Supplier, Core.Models.Supplier>().ReverseMap();
 
         }
     }

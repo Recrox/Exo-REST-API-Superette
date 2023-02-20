@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Data.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Technocite.Auchan.Superette.Core.Models;
 
 namespace Providers.Repositories
@@ -34,6 +35,14 @@ namespace Providers.Repositories
         public IEnumerable<Ticket> GetAll()
         {
             return this.mapper.Map<IEnumerable<Ticket>>(this.webSuperetteContext.Ticket);
+        }
+
+        public async Task<Ticket> GetByIdAsync(int id)
+        {
+            var result = await this.webSuperetteContext.Ticket.
+                FirstOrDefaultAsync(ca => ca.Id == id);
+
+            return this.mapper.Map<Ticket>(result);
         }
 
         public Task RemoveByIdAsync(int id)

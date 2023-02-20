@@ -19,7 +19,7 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
         {
             if (article.Quantity < 0)
             {
-                throw new Exception("Quantity not valid");
+                throw new Exception("Quantity must be upper or equals than 0");
             }
             await this.articleRepository.AddAsync(article);
         }
@@ -27,6 +27,11 @@ namespace Technocite.Auchan.Superette.Buisness.Domains
         public IEnumerable<Article> GetAll()
         {
             return this.articleRepository.GetAll();
+        }
+
+        public async Task<Article?> GetByIdAsync(int id)
+        {
+            return await this.articleRepository.GetByIdAsync(id);
         }
 
         public async Task RemoveByIdAsync(int id)

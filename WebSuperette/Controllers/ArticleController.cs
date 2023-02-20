@@ -27,6 +27,18 @@ namespace Technocite.Auchan.Superette.Site.Controllers
             return this.Ok(this.mapper.Map<IEnumerable<Article>>(articles));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAsync(int id)
+        {
+            
+            var article = await this.articleDomain.GetByIdAsync(id);
+            if (article is null)
+            {
+                return this.BadRequest("Article Introuvable");
+            }
+            return this.Ok(this.mapper.Map<Core.Models.Article>(article));
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddAsync(Article article) 
         {
